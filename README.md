@@ -143,17 +143,10 @@ Works on all modern browsers:
 - Firefox (latest)
 - Safari (latest)
 
-## 📄 License
+## 🌐 Visit
 
-[Add your license information here]
-
-## 🤝 Contributing
-
-[Add contribution guidelines here]
-
-## 📧 Support
-
-For issues or questions, please open an issue in the repository.
+- [Vercel Deployment](https://pokedex-971r19alb-madhavvvv22-dels-projects.vercel.app)
+- [Netlify Deployment](https://pokedex-for-u.netlify.app)
 
 ---
 
