@@ -61,40 +61,45 @@ const PokemonDetails = () => {
 return (
     <div className={`flex h-screen flex-col overflow-hidden ${theme.bg} p-4`}>
 
-         <Link
-            to="/pokedex"
-            className="mb-2 inline-block w-fit rounded-xl bg-white px-4 py-2 text-sm font-bold shadow-md transition hover:bg-gray-200"
-        >
-            🏠 Home
-        </Link>
-
         {/* Navigation */}
-        <div className="flex shrink-0 items-center justify-between pb-2">
+<div className="flex shrink-0 items-center justify-between pb-2">
 
-            {previousId >= 1 ? (
-                <Link
-                    to={`/pokemon/${previousId}`}
-                    className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold transition hover:bg-gray-300"
-                >
-                    ← Previous
-                </Link>
-            ) : (
-                <div />
-            )}
+    {/* Home */}
+    <Link
+        to="/pokedex"
+        className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold transition hover:bg-gray-300"
+    >
+        🏠 Home
+    </Link>
 
-            {nextId <= 1025 ? (
-                <Link
-                    to={`/pokemon/${nextId}`}
-                    className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold transition hover:bg-gray-300"
-                >
-                    Next →
-                </Link>
-            ) : (
-                <div />
-            )}
+    {/* Previous / Next */}
+    <div className="flex gap-3">
 
-        </div>
+        {previousId >= 1 ? (
+            <Link
+                to={`/pokemon/${previousId}`}
+                className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold transition hover:bg-gray-300"
+            >
+                ← Previous
+            </Link>
+        ) : (
+            <div />
+        )}
 
+        {nextId <= 1025 ? (
+            <Link
+                to={`/pokemon/${nextId}`}
+                className="rounded-xl bg-gray-200 px-4 py-2 text-sm font-bold transition hover:bg-gray-300"
+            >
+                Next →
+            </Link>
+        ) : (
+            <div />
+        )}
+
+    </div>
+
+</div>
 
         {/* Main Content */}
         <div className="grid min-h-0 flex-1 gap-4 md:grid-cols-2">
