@@ -61,6 +61,13 @@ const PokemonDetails = () => {
 return (
     <div className={`flex h-screen flex-col overflow-hidden ${theme.bg} p-4`}>
 
+         <Link
+            to="/pokedex"
+            className="mb-2 inline-block w-fit rounded-xl bg-white px-4 py-2 text-sm font-bold shadow-md transition hover:bg-gray-200"
+        >
+            🏠 Home
+        </Link>
+
         {/* Navigation */}
         <div className="flex shrink-0 items-center justify-between pb-2">
 
