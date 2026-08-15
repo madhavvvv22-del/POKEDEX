@@ -59,10 +59,19 @@ const PokemonDetails = () => {
 
 
 return (
-    <div className={`flex h-screen flex-col overflow-hidden ${theme.bg} p-4`}>
+    <div  className={`
+        min-h-screen
+        ${theme.bg}
+        p-3
+        sm:p-4
+        md:h-screen
+        md:overflow-hidden
+        md:flex
+        md:flex-col
+    `}>
 
         {/* Navigation */}
-<div className="flex shrink-0 items-center justify-between pb-2">
+<div className="flex shrink-0 flex-col gap-2 pb-3 sm:flex-row sm:items-center sm:justify-between">
 
     {/* Home */}
     <Link
@@ -102,10 +111,10 @@ return (
 </div>
 
         {/* Main Content */}
-        <div className="grid min-h-0 flex-1 gap-4 md:grid-cols-2">
+        <div className="grid gap-4 md:min-h-0 md:flex-1 md:grid-cols-2">
 
             {/* LEFT — Pokemon */}
-            <div className="flex min-h-0 flex-col rounded-3xl bg-white p-4 shadow-lg">
+           <div className="flex min-h-90 flex-col rounded-3xl bg-white p-4 shadow-lg md:min-h-0">
 
                 <p className="text-sm font-semibold text-gray-400">
                     #{String(pokemon.id).padStart(4, '0')}
@@ -146,7 +155,7 @@ return (
 
 
             {/* RIGHT — Information */}
-            <div className="flex min-h-0 flex-col rounded-3xl bg-white p-4 shadow-lg">
+            <div className="rounded-3xl bg-white p-4 shadow-lg md:flex md:min-h-0 md:flex-col">
 
                 {/* About */}
                 <div>
@@ -155,9 +164,9 @@ return (
                         About
                     </h2>
 
-                    <div className="grid grid-cols-3 gap-3">
+                   <div className="grid grid-cols-3 gap-2 sm:gap-3">
 
-                        <div className="rounded-2xl bg-gray-100 p-3 text-center">
+                        <div className="rounded-2xl bg-gray-100 p-2 text-center sm:p-3">
                             <p className="text-xs font-semibold text-gray-500">
                                 Height
                             </p>
@@ -167,7 +176,7 @@ return (
                             </p>
                         </div>
 
-                        <div className="rounded-2xl bg-gray-100 p-3 text-center">
+                       <div className="rounded-2xl bg-gray-100 p-2 text-center sm:p-3">
                             <p className="text-xs font-semibold text-gray-500">
                                 Weight
                             </p>
@@ -177,7 +186,7 @@ return (
                             </p>
                         </div>
 
-                        <div className="rounded-2xl bg-gray-100 p-3 text-center">
+                        <div className="rounded-2xl bg-gray-100 p-2 text-center sm:p-3">
                             <p className="text-xs font-semibold text-gray-500">
                                 Base XP
                             </p>
@@ -274,7 +283,7 @@ return (
 
 
         {/* Evolution Chain */}
-        <div className="mt-3 shrink-0 rounded-3xl bg-white p-3 shadow-lg">
+       <div className="mt-4 rounded-3xl bg-white p-3 shadow-lg md:mt-3 md:shrink-0">
 
             <h2 className="mb-2 text-center text-lg font-bold">
                 Evolution Chain
